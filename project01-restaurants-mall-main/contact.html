@@ -1,74 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Contact</title>
+    <link rel="stylesheet" href="./styles/contact.css">
+    <script src="https://kit.fontawesome.com/caaf7d8a53.js" crossorigin="anonymous"></script>
+    <title>The Restaurant Mall | Contact</title>
 </head>
-<body>
 
-    <header class="headerC">
+<body>
+    <header>
         <div class="wrapper">
-            <nav class="navBar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <h1>GET IN TOUCH</h1>
+            <div class="wrapper">
+                <div class="navbar navbarSm">
+                    <div class="container nav-container">
+                        <input class="checkbox" type="checkbox" name="" id="" />
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+    
+                        <ul class="menu-items">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            <div class="title">
+                <nav>
+                    <ul class="navbarLg">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <h1>Get in Touch</h1>
+            </div>
         </div>
     </header>
-
     <main>
-        <section class="wrapper">
-            <div class="leftContact">
-                <div class="socialMedia">
-                    <ul>
-                        <li class="mediaIcons"><img src="./assets/facebook-f.svg" alt="facebook favicon"></li>
-                        <li class="mediaIcons"><img src="./assets/instagram.svg" alt="instagram favicon"></li>
-                        <li class="mediaIcons"><img src="./assets/twitter.svg" alt="twitter favicon"></li>
-                        <li class="mediaIcons"><img src="./assets/whatsapp.svg" alt="whatsapp favicon"></li>
-                    </ul>
-                </div>
-                <div class="addresses">
-                    <ul>
-                        <li><span>info@email.com</span></li>
-                        <li>123-456-7890 123</li>
-                        <li>Queen Street West,</li>
-                        <li>Unit 10</li>
-                        <li>Toronto, Ontario</li>
-                        <li>M5V 2D5</li>
-                    </ul>
-                </div>
-            </div> 
-            
-            <div class="contactForm">
+        <div class="contact wrapper secondaryBG">
+            <section class="contactForm primaryBG">
                 <form action="">
-                    <div class="formName">
-                        <label for="Name"></label>
-                        <input type="text" id="Name" name="Name" placeholder="  Name">
+                    <div class="formControl">
+                        <div class="formItem">
+                            <label for="contactName"></label>
+                            <input type="text" name="contactName" id="contactName" placeholder="Name" class="formSmall">
+                        </div>
+                        <div class="formItem">
+                            <label for="contactEmail"></label>
+                            <input type="email" name="contactEmail" id="contactEmail" placeholder="Email address"
+                                class="formSmall">
+                        </div>
                     </div>
-                    <div class="formEmail">
-                        <label for="email"></label>
-                        <input type="text" id="email" name="email" placeholder="  Email address">
+                    <div>
+                        <textarea placeholder="Message"></textarea>
                     </div>
-                    <div class="formMessage">
-                        <textarea name="formMessage" id="message" placeholder=" Message"></textarea>     
-                        <button type="submit" class="buttonYellow">SUBMIT</button>
-                    </div>    
+                    <input type="submit" class='button btnLight' value="Submit">
                 </form>
-            </div>
-                
-        </section>
-        
+            </section>
+            <section class="contactInfoContainer ">                
+                <div>
+                    <div class="socialMediaIcons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <p>info@email.com</p>
+                    <p>
+                        <span>123 - 456 - 7890</span>
+                        <span>123 Queen Street West, Unit 10</span>
+                        <span>Toronto, Ontario</span>
+                        <span>M5V2O5</span>
+                    </p>
+                </div>
+            </section>
+        </div>
     </main>
-    
     <footer>
-        <p>Copyright &#169; 2019 Juno College</p>
+        <p>Copyright &copy 2019 Juno College</p>
     </footer>
 </body>
+
 </html>
