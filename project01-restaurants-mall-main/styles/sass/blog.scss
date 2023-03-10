@@ -1,0 +1,148 @@
+@use './partials/setup';
+@use './partials/typography';
+@use './partials/baseStyles';
+@use './partials/header';
+@use './partials/nav';
+@use './partials/footer';
+@use './partials/contactBody';
+@use './partials/form';
+@use './partials/variables' as *;
+
+header {
+    background-image: url('../assets/blog-header.jpg');
+}
+
+h1 {
+    padding: 4.7rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.blogContent {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+.blogPost,
+.blogCommentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.blogPost {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+.blogMain {
+    position: relative;
+}
+
+.blogImageContainer {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    right: -10px;
+    top: -5rem;
+}
+
+.blogImage {
+    box-shadow: -20px 20px $highlightColor;
+}
+
+.blogCommentSection{
+    padding: 4rem 2rem;
+    margin: auto;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.blogCommentImg {
+    width: 15%;
+}
+
+.blogCommentContent {
+    width: 85%;
+}
+
+.blogComment {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.blogSide {
+    background-color: $primaryBackground;
+    padding: 4rem 2rem;
+    height: fit-content;
+    
+}
+
+.blogSideRecent li {
+    color: $textColor;
+    font-family: $secondaryFont;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: 0.063rem;
+}
+
+@media (min-width: 1000px) {
+    .blogContent {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .blogMain {
+        width: 100%;
+    }
+
+    .blogCommentSection {
+        margin-bottom: 5rem;
+    }
+
+    .blogImageContainer {
+        width: 60vw;
+        position: absolute;
+        top: -30vh;
+        right: 0;
+    }
+
+    .blogPostContent{
+        margin: 25vw auto 0;
+        width: 70%;
+    }
+
+    .blogSide {
+        width: 30%;
+        margin: 8rem 4rem;
+    }
+
+    .blogSideImageContainer{
+        width: 140%;
+        position: relative;
+        top: -5rem;
+        left: -7rem;
+    }
+
+    .blogSideContent{
+        margin: -4rem 0 2rem;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .blogSideImageContainer{
+        width: 150%;
+    }
+}

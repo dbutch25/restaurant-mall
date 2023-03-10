@@ -1,0 +1,81 @@
+@use './variables' as *;
+
+.info {
+    ul {
+        padding-bottom: 50px;
+        padding-top: 300px; //this resizes according to width to scale w/header img
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin: 20px auto;
+            gap: 30px;
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.infoIconContainer {
+    background-color: $highlightColor;
+    width: 6.7rem;
+    height: 6.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .infoIcons {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}
+
+.infoContent {    
+    h2 {
+        color: $textColor;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .info ul {
+        padding-top: 175px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .info ul {
+        padding-bottom: 100px;
+        padding-top: 175px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        li{
+            flex-direction: row;
+            align-items: flex-start;
+            width: 40%;
+            gap: 5%;
+            h2 {
+                text-align: left;
+            }
+        } 
+        h2 {
+            line-height: 2.813rem;
+        }
+    } 
+
+    .infoIconContainer {
+        width: 4rem;
+        height: 4rem;
+        .infoIcons {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

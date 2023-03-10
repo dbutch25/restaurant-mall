@@ -1,0 +1,120 @@
+@use './variables' as *;
+
+.articleSection {
+    padding: 100px 0 50px;
+}
+
+.articleContainerOne,
+.articleContainerTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+
+    .articleContent {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        h2{
+            text-align: center;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            width: fit-content;
+        }
+    }
+}
+
+.articleImage {
+    display: flex;
+    justify-content: center;
+
+    img {
+        position: relative;
+        left: -10px;
+        width: 80%;
+        box-shadow: 20px 20px $highlightColor;
+    }
+}
+
+@media (min-width: 1000px) {
+    .articleSection {
+        padding: 0;
+    }
+
+    .articleContent,
+    .articleImage {
+        width: 50%;
+    }
+
+    .articleImage img {
+        position: static;
+        left: 0;
+        width: 100%;
+        max-width: 700px;
+        position: relative;
+
+    }
+
+    .articleContainerOne {
+        flex-direction: row;
+        .articleContent {
+            align-items: flex-start;
+        }
+
+        .articleImage {
+            display: block;
+            justify-content: flex-start;
+
+            .artImgOne {
+                top: -50px;
+            }
+        }
+    }
+
+    .articleContainerTwo {
+        flex-direction: row-reverse;
+        h2 {
+            padding-top: 4rem;
+        }
+        .articleContent {
+            align-items: flex-end;
+        }
+
+        p {
+            text-align: right;
+        }
+
+        .articleImage {
+            display: block;
+            justify-content: flex-end;
+
+            .artImgTwo {
+                bottom: -50px;
+                box-shadow: -20px 20px $highlightColor;
+                float: right; //temporary stopgap
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .articleImage img {
+        position: static;
+    }
+
+    .articleContainerOne{
+        padding: 3rem;
+    }
+
+    .articleContainerTwo {
+        h2{
+            padding-top: 0;
+        }
+        
+    }
+}

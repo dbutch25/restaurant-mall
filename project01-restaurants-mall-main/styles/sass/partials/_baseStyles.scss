@@ -1,0 +1,23 @@
+@use './variables' as *;
+
+header{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background: $black;
+}
+
+ul {
+    margin: 0;
+}
+
+.primaryBG {
+    background: $primaryBackground;
+}
+
+.secondaryBG {
+    background: $secondaryBackground;
+}

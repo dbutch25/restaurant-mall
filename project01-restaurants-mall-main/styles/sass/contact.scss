@@ -1,0 +1,78 @@
+@use './partials/setup';
+@use './partials/typography';
+@use './partials/baseStyles';
+@use './partials/header';
+@use './partials/nav';
+@use './partials/footer';
+@use './partials/form';
+@use './partials/variables' as *;
+
+header {
+    background-image: url('../assets/contact-header.jpg');
+}
+
+h1 {
+    padding: 4.7rem 0;
+}
+
+.contactInfoContainer {
+    max-width: 400px;
+    margin: auto;
+
+    span {
+        display: block;
+    }
+}
+
+.contactForm {
+    width: 80%;
+    box-shadow: 25px 25px $highlightColor;
+    position: relative;
+    top: -12vh;
+    left: -12px;
+    padding: 50px;
+}
+
+.contactInfoContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    span{
+        display: block;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+.socialMediaIcons{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 20px;
+    i {
+        font-size: 2rem;
+        color: $highlightColor;
+    }
+}
+
+@media (min-width: 1000px) {
+    .contact {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .contactForm {
+        left: auto;
+        width: 50%;
+        right: 12.5vw;
+        margin: 0;
+    }
+
+    .contactInfoContainer{
+        top: 0;
+        right: 5vw;
+    }
+}
